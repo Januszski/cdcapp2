@@ -25,3 +25,147 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.striped-square {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background: repeating-linear-gradient(
+    45deg,
+    yellow,
+    yellow 10px,
+    black 10px,
+    black 20px
+  );
+}
+
+.stoplight {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 100px;
+  height: 300px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.light {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 5px auto;
+}
+
+.green {
+  background-color: green;
+}
+.gray {
+  background-color: gray;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+
+.metallic-background {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: gray;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metallic-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.screws {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.screw {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.screw-top-left {
+  top: 5px;
+  left: 5px;
+}
+
+.screw-top-right {
+  top: 5px;
+  right: 5px;
+}
+
+.screw-bottom-left {
+  bottom: 5px;
+  left: 5px;
+}
+
+.screw-bottom-right {
+  bottom: 5px;
+  right: 5px;
+}
+
+.screw::before,
+.screw::after {
+  content: "";
+  position: absolute;
+  background: #333;
+}
+
+.screw::before {
+  width: 2px;
+  height: 10px;
+  left: 4px;
+  top: 0;
+}
+
+.screw::after {
+  width: 10px;
+  height: 2px;
+  left: 0;
+  top: 4px;
+}
+
+.metallic-button:hover {
+  background: gray;
+}
+
+@keyframes letterLightUp {
+  0% {
+    color: blue;
+  }
+  50% {
+    color: turquoise;
+  }
+  100% {
+    color: blueviolet;
+  }
+}
+
+.letter-animation {
+  animation: letterLightUp 3s linear infinite alternate;
+}
